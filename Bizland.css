@@ -42,7 +42,7 @@
 } */
 
 .pro {
-    background-image: url(/images/hero-bg.jpg);
+    background-image: url(images/hero-bg.jpg);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
