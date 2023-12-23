@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>demo owl.carousel</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- default css and js -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+		<!-- main css and js for this page -->
+		
+		<link rel="stylesheet" href="css/owl.carousel.css" />
+		<link rel="stylesheet" href="css/owl.theme.default.css" />	
+		<script src="js/owl.carousel.js"></script>
+		
+	</head>
+	<body>
+		<section class="slider_section">
+			<div class="container">
+				
+				<!-- main part start -->
+				
+				<style>
+					.product_slider {
+					overflow: hidden; 
+					}
+					.product_slider .gallery .lslide {
+					border: 1px solid #e9e6e6; 
+					}
+					.product_slider .gallery .lslide img {
+					width: 100%;
+					background: #fff; 
+					}
+					.product_slider .lSPager li {
+					border: 1px solid #dfdfdf;
+					border-radius: 0 !important; 
+					}
+					.product_slider .lSPager li.active {
+					border: 1px solid #c39523;
+					}
+					.product_slider .gallery .lslide img.zoomImg {
+					width: 800px !important;
+					object-fit: contain;
+					height: 800px !important;
+					}
+				</style>
+				
+				<div class="col-md-12">
+				    <div id="home_slider" class="home_slider owl-carousel owl-theme">
+					    <div class="item">
+							<img src="img.png">
+						</div>
+					    <div class="item">
+							<img src="img.png">
+						</div>
+					</div>
+				</div>
+				
+				<script>
+					// owl carousel script start //
+					$(document).ready(function() {
+						
+						// main slider //
+						$("#home_slider").owlCarousel({
+							nav:false,
+							dots: true,
+							//autoplayHoverPause:true,
+							//animateOut: 'fadeOut',
+							autoplayTimeout:5000,
+							autoplaySpeed: 1500,
+							loop:true,
+							autoplay:true,
+							items : 1,	
+							responsiveClass: true,
+							responsive: {
+								0:{
+									loop:true,
+									items: 1
+								},
+								480:{
+									loop:true,
+									items: 1
+								},
+								768:{
+									nav:false,
+									items: 1
+								},
+								1199:{
+									items: 2 
+								}
+							}
+						});
+						
+						// slide arrow icon //
+						$( ".owl-prev").html('<i class="fa fa-angle-left"></i>');
+						$( ".owl-next").html('<i class="fa fa-angle-right"></i>');
+						
+					});
+					
+					// owl carousel script end //
+				</script>
+				
+				<!-- main part end -->
+				
+			</div>
+</section>
+
+</body>
+</html>
+
